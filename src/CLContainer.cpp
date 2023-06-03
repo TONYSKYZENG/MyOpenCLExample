@@ -213,6 +213,7 @@ void CLContainer::execute(size_t gs, size_t ls) {
   if (kernelOK == false) {
     return;
   }
+  
   //prepare host out
   for (size_t i = 0; i < hostOut.size(); i++) {  //err = clEnqueueWriteBuffer(queue, kernelIn[i], CL_TRUE, 0,
     //  hostOut[i].size, hostOut[i].ptr, 0, NULL, NULL);
@@ -221,7 +222,6 @@ void CLContainer::execute(size_t gs, size_t ls) {
 
     pars++;
   }
-
 
 
   //prepare host in
